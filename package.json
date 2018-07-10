@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js --progress",
+    "watch": "webpack --config webpack.config.js --progress --watch",
     "test": "karma start",
     "tdd": "karma start --auto-watch --no-single-run",
     "build-server": "babel server -d dist",

@@ -17,7 +17,7 @@ config = {
     output: {
         path: PATHS.public,
         filename: 'bundle.js',
-        publicPath: 'http://localhost:3333/',
+        publicPath: 'http://localhost:8000/',
     },
     devtool: 'eval-source-map',
     devServer: {

@@ -25,10 +25,10 @@ var Routes = exports.Routes = function Routes() {
     var Router = _express2.default.Router();
 
     Router.get('/', function (req, res, next) {
-        res.sendFile('index.html', { root: _path2.default.join('' + __dirname, '../../', 'build') });
+        res.sendFile('index.html', { root: _path2.default.join('' + __dirname, '../../', 'public') });
     });
 
-    Router.get('/*', _express2.default.static(_path2.default.join('' + __dirname, '../../', 'build')));
+    Router.get('/*', _express2.default.static(_path2.default.join('' + __dirname, '../../', 'public')));
 
     Router.get('/build/*', _express2.default.static(_path2.default.join('' + __dirname, '../../', 'build')));
 

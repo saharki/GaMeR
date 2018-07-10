@@ -6,10 +6,10 @@ export const Routes = (opts = {}) => {
     const Router = Express.Router()
     
     Router.get('/', (req, res, next) => {
-        res.sendFile('index.html', { root: Path.join(`${__dirname}`, '../../', 'build') })
+        res.sendFile('index.html', { root: Path.join(`${__dirname}`, '../../', 'public') })
     })
     
-    Router.get('/*', Express.static(Path.join(`${__dirname}`, '../../', 'build')))
+    Router.get('/*',  Express.static(Path.join(`${__dirname}`, '../../', 'public')))
     
     Router.get('/build/*', Express.static(Path.join(`${__dirname}`, '../../', 'build')))
 
