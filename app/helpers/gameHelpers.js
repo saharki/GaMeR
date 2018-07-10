@@ -21,8 +21,8 @@ export function calcYDist(rotation, distance) {
 }
 
 export let screen = {
-    _width: null,
-    _height: null,
+    _width: 1000,
+    _height: 1000,
 
     get width() {
         if (!this._width) {

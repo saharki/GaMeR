@@ -14,7 +14,9 @@ const style = {
     bottom: 0,
     left: 0,
     color: 'white',
-    fontFamily: 'Courier New, Courier, monospace'
+    fontFamily: 'Courier New, Courier, monospace',
+    width: '1000px',
+    height: '1000px',
 };
 const navStyle = {
     textAlign: 'center',
@@ -78,14 +80,6 @@ class Dashboard extends React.Component {
             <div
                 style={style}
             >
-                <div
-                    style={navStyle}
-                >
-                    &#x21E6;
-                    &#x21E7;
-                    &#x21E8; to move
-                    [SPACE] to shoot
-                </div>
                 <p style={messagestyle}>{dashboard.message}</p>
                 <button
                     onClick={this.handleClick}

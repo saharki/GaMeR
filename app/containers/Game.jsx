@@ -40,11 +40,11 @@ class Game extends React.Component {
             case keyCodes.UP:
                 this.props.dispatch(forward());
                 break;
-            case keyCodes.SPACE:
-                ({rot, pos: {x, y}} = this.props.spaceship);
-                laserOrigin = {rot, pos: {x, y}};
-                this.props.dispatch(fire(laserOrigin));
-                break;
+            // case keyCodes.SPACE:
+            //     ({rot, pos: {x, y}} = this.props.spaceship);
+            //     laserOrigin = {rot, pos: {x, y}};
+            //     this.props.dispatch(fire(laserOrigin));
+            //     break;
             default:
                 break;
         }
@@ -72,7 +72,7 @@ class Game extends React.Component {
     }
 
     static handleResize() {
-        screen.resize();
+        // screen.resize();
     }
 
     render() {
