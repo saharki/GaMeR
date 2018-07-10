@@ -1,5 +1,11 @@
-import React from 'react'
-import { render } from 'react-dom'
-import App from './App'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './containers/App.jsx';
+import {Provider} from 'react-redux';
+import appStore from './store/appStore';
 
-render(<App name='World' />, document.getElementById('root'))
+ReactDOM.render(
+    <Provider store={appStore}>
+        <App/>
+    </Provider>,
+    document.getElementById('app'));

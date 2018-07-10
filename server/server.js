@@ -9,8 +9,6 @@ import Cors from 'cors'
 import Session from 'cookie-session'
 import CookieParser from 'cookie-parser'
 
-import favicon from 'serve-favicon'
-
 import { promisify as Promisify } from 'util'
 
 import Routes from './routes'

@@ -28,10 +28,6 @@ var _cookieParser = require('cookie-parser');
 
 var _cookieParser2 = _interopRequireDefault(_cookieParser);
 
-var _serveFavicon = require('serve-favicon');
-
-var _serveFavicon2 = _interopRequireDefault(_serveFavicon);
-
 var _util = require('util');
 
 var _routes = require('./routes');
