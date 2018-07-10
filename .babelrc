@@ -1,0 +1,13 @@
+{
+  "presets": ["es2015", "es2017", "stage-2", "react"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "utils": "./server/utils",
+        "helpers": "./server/api/helpers",
+        "schemas": "./server/api/v1/schemas"
+      }
+    }]
+  ]
+}

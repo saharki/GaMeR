@@ -1,0 +1,29 @@
+image: node:latest
+
+stages:
+  - production-next
+  - production
+  
+production-next:
+  type: deploy
+  stage: production-next
+  image: ruby:latest
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=festiplay-next --api-key=$HEROKU_API_KEY
+  only:
+    - develop
+
+production:
+  type: deploy
+  stage: production
+  image: ruby:latest
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=festiplay --api-key=$HEROKU_API_KEY
+  only:
+    - master

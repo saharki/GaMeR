@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../server/routes/index.js"],"names":["Routes"],"mappings":";;;;;;AAAA;;;;;;kBAEeA,gB","file":"index.js","sourcesContent":["import Routes from './routes'\r\n\r\nexport default Routes"]}
