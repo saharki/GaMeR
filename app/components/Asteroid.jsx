@@ -4,7 +4,7 @@ import {Line} from 'react-konva';
 class Asteroid extends React.Component {
 
     render() {
-        var {pos, rot, radius} = this.props;
+        var {pos, rot, radius, color} = this.props;
         var unit = radius / 10;
         return (
             <Line
@@ -26,6 +26,7 @@ class Asteroid extends React.Component {
                 strokeWidth={1}
                 stroke="#ffffff"
                 rotation={rot}
+                fill={color}
             />
         )
     }

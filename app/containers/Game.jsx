@@ -7,6 +7,8 @@ import AsteroidField from '../components/AsteroidField.jsx';
 import Dashboard from '../containers/Dashboard.jsx';
 import * as keyCodes from '../constants/keyCodes.js';
 import {screen} from '../helpers/gameHelpers.js';
+import * as gameStates from '../constants/gameStates.js';
+
 import {
     rotateRight,
     rotateLeft,
@@ -51,10 +53,12 @@ class Game extends React.Component {
     }
 
     updateGame() {
-        this.props.dispatch(asteroidHitTest());
-        this.props.dispatch(spaceshipHitTest());
+        // this.props.dispatch(asteroidHitTest());
+        // this.props.dispatch(spaceshipHitTest());
         this.props.dispatch(update());
         requestAnimationFrame(this.updateGame.bind(this));
+        if(this.props.dashboard.gameState !== gameStates.STOPPED)
+        this.props.nextSpaceshipPosition()
     }
 
     handleKeyUp(event) {
@@ -132,8 +136,9 @@ class Game extends React.Component {
 }
 
 export default connect((state) => ({
-    spaceship: state.spaceship,
+    spaceshipState: state.spaceship,
     laser: state.laser,
-    asteroidField: state.asteroidField,
-    debris: state.debris
+    asteroidFieldState: state.asteroidField,
+    debris: state.debris,
+    dashboard: state.dashboard,
 }))(Game);

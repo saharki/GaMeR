@@ -29,16 +29,6 @@ class AsteroidField extends React.Component {
                     radius={spaceship.radius}
                     laser={laser}
                 />
-                {laser.bolts.map((bolt) => {
-                    return (
-                        <LaserBolt
-                            key={Math.random()}
-                            rot={bolt.rot}
-                            radius={bolt.radius}
-                            pos={bolt.pos}
-                        />
-                    )
-                })}
                 {asteroidField.asteroids.map((asteroid) => {
                     return (
                         <Asteroid
@@ -46,6 +36,7 @@ class AsteroidField extends React.Component {
                             rot={asteroid.rot}
                             radius={asteroid.radius}
                             pos={asteroid.pos}
+                            color={asteroid.color}
                         />
                     )
                 })}
