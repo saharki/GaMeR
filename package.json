@@ -4,7 +4,7 @@
   "description": "Simple game using React/Redux and react-konva for defining canvas objecs in JSX",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "node dist",
     "build": "webpack --config webpack.config.js --progress",
     "watch": "webpack --config webpack.config.js --progress --watch",
     "test": "karma start",
